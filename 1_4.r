@@ -1,6 +1,6 @@
 # -----------------------------
 # Q1.2 - ACF Plot for AR(2)
-# phi1 = -0.6, phi2 = 0.5 (Madsen notation, same in R simulation here)
+# phi1 = 0.6, phi2 = -0.3 (Madsen notation, same in R simulation here)
 # -----------------------------
 
 library(forecast)
@@ -13,8 +13,8 @@ n <- 200
 num_series <- 5
 max_lag <- 30
 
-phi1 <- -0.6
-phi2 <- 0.5
+phi1 <- 0.6
+phi2 <- -0.3
 
 # Step 1: Simulate 5 realizations of AR(2)
 simulations <- replicate(num_series, arima.sim(model = list(ar = c(phi1, phi2)), n = n))
